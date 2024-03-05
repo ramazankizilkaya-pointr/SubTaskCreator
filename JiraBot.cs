@@ -94,7 +94,9 @@ namespace SubTaskCreator
             {
                 LogMessage($"{assignment.Key}) Tasks count: {assignment.Value.Count}, Tasks: {string.Join(", ", assignment.Value)}");
             }
+            driver.Quit();
             MessageBox.Show("Done");
+
         }
 
         public void LogMessage(string message)

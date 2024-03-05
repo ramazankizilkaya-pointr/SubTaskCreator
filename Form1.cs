@@ -72,7 +72,8 @@ namespace SubTaskCreator
                 testerList.Add(item.ToString());
             }
             var options = new ChromeOptions();
-            options.AddArguments("start-maximized")
+            options.AddArguments("start-maximized");
+            options.AddArguments("headless");
 ;            var driver = new ChromeDriver(options);
             var bot = new JiraBot(driver, logTextBox);
             await Task.Run(()=> bot.LoginAndOpenTaskPage(jiraTicketId, userName, userPassword));
